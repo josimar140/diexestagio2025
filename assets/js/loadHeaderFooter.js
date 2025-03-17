@@ -12,7 +12,9 @@ async function loadModularContent() {
   document.getElementById('footer').innerHTML = footer;
 
   // Chama a função para destacar o item ativo
-  setActiveMenu();
+  // setActiveMenu();
+  //Pequeno atraso para garantir que os links foram adicionados ao DOM
+  setActiveMenu(setActiveMenu, 100);
 }
 
 // Função para destacar o item ativo no menu
