@@ -14,7 +14,7 @@ async function loadModularContent() {
   // Chama a função para destacar o item ativo
   // setActiveMenu();
   //Pequeno atraso para garantir que os links foram adicionados ao DOM
-  setActiveMenu(setActiveMenu, 100);
+  setTimeout(setActiveMenu, 100);
 }
 
 // Função para destacar o item ativo no menu
