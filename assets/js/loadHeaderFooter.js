@@ -7,6 +7,9 @@ async function loadModularContent() {
   // Chama a função do menu hambúrguer após o carregamento do header
   iniciarMenuHamburguer();
 
+  //Aguarde o próximo ciclo do javascript para  garantir que o header foi adicionado ao DOM
+  requestAnimationFrame(setActiveMenu);
+  
   // Carrega o footer
   const footer = await fetch('footer.html').then((response) => response.text());
   document.getElementById('footer').innerHTML = footer;
@@ -14,7 +17,7 @@ async function loadModularContent() {
   // Chama a função para destacar o item ativo
   // setActiveMenu();
   //Pequeno atraso para garantir que os links foram adicionados ao DOM
-  setTimeout(setActiveMenu, 100);
+  //setTimeout(setActiveMenu, 100);
 }
 
 // Função para destacar o item ativo no menu
